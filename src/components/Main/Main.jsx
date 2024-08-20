@@ -11,9 +11,9 @@ function Main() {
           <Link to='/about' className='about-text hover-target' aria-label='About Cy' data-aos='fade-right'>
             About
           </Link>
-          <div className='contact-text hover-target' aria-label='Contact Cy' data-aos='fade-left'>
+          <Link to='/contact' className='contact-text hover-target' aria-label='Contact Cy' data-aos='fade-left'>
             contact
-          </div>
+          </Link>
           <div className='section-center'>
             <div className='container-fluid'>
               <div className='row justify-content-center'>
@@ -25,12 +25,14 @@ function Main() {
                 </div>
                 <div className='col-12 text-center mt-4 mt-lg-5' data-aos='zoom-in' data-aos-delay='400'>
                   <p>
-                    <Link to ='/skill' className='history hover-target' aria-label="View Cy's skill inventory">
+                    <Link to='/skill' className='history hover-target' aria-label="View Cy's skill inventory">
                       <span>Skill Inventory</span>
                     </Link>
-                    <span className='portfolio hover-target' aria-label="View Cy's portfolio">
-                      portfolio
-                    </span>
+                    <Link to='/portfolio'>
+                      <span className='portfolio hover-target' aria-label="View Cy's portfolio">
+                        portfolio
+                      </span>
+                    </Link>
                   </p>
                 </div>
               </div>
