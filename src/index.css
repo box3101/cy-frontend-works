@@ -99,7 +99,6 @@ a:hover {
   transition: all 300ms linear;
   transition-delay: 400ms;
   transform-origin: center top;
-
 }
 
 /* 오버레이 추가 */
@@ -758,31 +757,31 @@ li {
 
 /* 웹킷 기반 브라우저 */
 ::-webkit-scrollbar {
-   width: 12px;
- }
- 
- ::-webkit-scrollbar-track {
-   background: #f1f1f1;
-   border-radius: 10px;
- }
- 
- ::-webkit-scrollbar-thumb {
-   background: #888;
-   border-radius: 10px;
- }
- 
- ::-webkit-scrollbar-thumb:hover {
-   background: #555;
- }
- 
- /* Firefox */
- body {
-   scrollbar-width: thin;
-   scrollbar-color: #888 #f1f1f1;
- }
+  width: 12px;
+}
 
- /* fadeTransition */
- .app-container {
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Firefox */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+/* fadeTransition */
+.app-container {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
@@ -796,12 +795,16 @@ li {
   bottom: 0;
   background: #1f2029;
 }
-.fade-enter-done .wave2{display: none;}
-.fade-enter-done .wave3{display: none;}
-.fade-enter-done .wave1{
+.fade-enter-done .wave2 {
   display: none;
 }
-.fade-enter-done{
+.fade-enter-done .wave3 {
+  display: none;
+}
+.fade-enter-done .wave1 {
+  display: none;
+}
+.fade-enter-done {
   overflow-y: auto;
 }
 .wave {
@@ -812,30 +815,48 @@ li {
   background: #000;
 }
 
-.wave1 { background: #1a2733; z-index: 13; } 
-.wave2 { background: #253545; z-index: 12; }
-.wave3 { background: #4a3b62; z-index: 11; } 
+.wave1 {
+  background: #1a2733;
+  z-index: 13;
+}
+.wave2 {
+  background: #253545;
+  z-index: 12;
+}
+.wave3 {
+  background: #4a3b62;
+  z-index: 11;
+}
 
-.fade-enter .wave1 { animation: waveIn 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) forwards; }
-.fade-enter .wave2 { animation: waveIn 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s forwards; }
-.fade-enter .wave3 { animation: waveIn 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s forwards; }
+.fade-enter .wave1 {
+  animation: waveIn 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+.fade-enter .wave2 {
+  animation: waveIn 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s forwards;
+}
+.fade-enter .wave3 {
+  animation: waveIn 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s forwards;
+}
 
 @keyframes waveIn {
-  0% { bottom: -100%; }
-  100% { bottom: 100%; }
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 100%;
+  }
 }
 
 .page-content {
   opacity: 0;
   transition: opacity 0.3s ease-in;
 }
-.page-content.visible{
+.page-content.visible {
   overflow-y: auto;
 }
 .page-content.visible {
   opacity: 1;
 }
-
 
 img {
   -webkit-touch-callout: none;
@@ -962,7 +983,9 @@ img {
   padding-top: 4.625rem;
   color: #fff;
   text-align: center;
-  font: 700 1.875em/1 "Pretendard", sans-serif;
+  font:
+    700 1.875em/1 "Pretendard",
+    sans-serif;
 }
 @media (max-width: 900px) {
   .card-wrap .image-hover .title {
@@ -974,7 +997,9 @@ img {
   padding-top: 4.625em;
   color: #fff;
   text-align: center;
-  font: 500 1.0625em/1.5 "Pretendard", sans-serif;
+  font:
+    500 1.0625em/1.5 "Pretendard",
+    sans-serif;
   letter-spacing: -1px;
 }
 @media (max-width: 900px) {
@@ -1013,7 +1038,9 @@ img {
   display: inline-block;
   padding: 0.6875em 0.8125em;
   color: #fff;
-  font: 600 0.875em/1 "Pretendard", sans-serif;
+  font:
+    600 0.875em/1 "Pretendard",
+    sans-serif;
   border-radius: 6px;
 }
 .card-wrap .pf-card:hover .image-hover {
@@ -1049,7 +1076,8 @@ img {
   -webkit-animation-direction: alternate, reverse, alternate;
 }
 @keyframes scan-02 {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: translate(-50%, 0px);
     transform: translate(-50%, 0px);
     animation-delay: 0.6s;
@@ -1101,22 +1129,22 @@ img {
 .card-wrap > li.brand-card-ict-ksa-system .image-hover .tag-wrap .tag {
   background: rgba(237, 120, 150, 0.54);
 }
-.card-wrap > li.brand-card-banchanggo .image-hover {
+.card-wrap > li.brand-card-crm-pocket-camp-frontend .image-hover {
   background-color: rgba(255, 186, 0, 0.87);
 }
-.card-wrap > li.brand-card-banchanggo .image-hover .tag-wrap .tag {
+.card-wrap > li.brand-card-crm-pocket-camp-frontend .image-hover .tag-wrap .tag {
   background: #bf8a00;
 }
-.card-wrap > li.brand-card-onedaycore .image-hover {
+.card-wrap > li.brand-card-company-portfolio-landing .image-hover {
   background-color: rgba(31, 41, 0, 0.9);
 }
-.card-wrap > li.brand-card-onedaycore .image-hover .tag-wrap .tag {
+.card-wrap > li.brand-card-company-portfolio-landing .image-hover .tag-wrap .tag {
   background: #151d01;
 }
-.card-wrap > li.brand-card-jjaggae .image-hover {
+.card-wrap > li.brand-card-react-portfolio .image-hover {
   background-color: rgba(38, 3, 3, 0.9);
 }
-.card-wrap > li.brand-card-jjaggae .image-hover .tag-wrap .tag {
+.card-wrap > li.brand-card-react-portfolio .image-hover .tag-wrap .tag {
   background: #220200;
 }
 .card-wrap > li.brand-card-g4b-business-support .image-hover {
@@ -1137,10 +1165,10 @@ img {
 .card-wrap > li.brand-card-samsung-sdi-gsop .image-hover .tag-wrap .tag {
   background: #0020a7;
 }
-.card-wrap > li.brand-card-veventusnt .image-hover {
+.card-wrap > li.brand-card-okr-solution-development .image-hover {
   background-color: rgba(60, 163, 60, 0.9);
 }
-.card-wrap > li.brand-card-veventusnt .image-hover .tag-wrap .tag {
+.card-wrap > li.brand-card-okr-solution-development .image-hover .tag-wrap .tag {
   background: #2c842b;
 }
 .card-wrap .card-content {
@@ -1149,18 +1177,25 @@ img {
 .card-wrap .card-content h2 {
   margin-top: 3em;
   color: #fff;
-  opacity: .4;
-  font: 400 0.875em/1 "Pretendard", sans-serif;
+  opacity: 0.4;
+  font:
+    400 0.875em/1 "Pretendard",
+    sans-serif;
 }
 @media (max-width: 900px) {
   .card-wrap .card-content h2 {
     font-size: 13px;
+    line-height: 1.4;
+    word-break: keep-all;
   }
 }
 .card-wrap .card-content h1 {
   margin-top: 0.575em;
   color: #fff;
-  font: 700 1.875em/1 "Pretendard", sans-serif;
+  font:
+    700 1.875em/1.4 "Pretendard",
+    sans-serif;
+  word-break: keep-all;
 }
 @media (max-width: 900px) {
   .card-wrap .card-content h1 {
@@ -1174,8 +1209,10 @@ img {
 .card-wrap .card-content p.card-description {
   margin-top: 1.375em;
   color: #fff;
-  opacity: .6;
-  font: 400 0.9375em/1.5 "Pretendard", sans-serif;
+  opacity: 0.6;
+  font:
+    400 0.9375em/1.5 "Pretendard",
+    sans-serif;
 }
 @media (max-width: 600px) {
   .card-wrap .card-content p.card-description {
@@ -1185,6 +1222,45 @@ img {
     margin-top: 12px;
   }
 }
-ol, ul {
+ol,
+ul {
   padding-left: 0;
+}
+.brand-btn-group {
+  display: flex;
+  gap: 0.5em;
+}
+.brand-btn-group button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  color: #8d8d8d;
+  padding: 0.8125em 1.3125em;
+  border: none;
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 1.6875em;
+  cursor: pointer;
+}
+.brand-btn-group button:hover {
+  filter: brightness(95%);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2509803922);
+}
+.brand-btn-group button.is-active {
+  background: #866baf;
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .brand-btn-group button {
+    font-size: 15px;
+    padding: 10px 16px;
+  }
 }

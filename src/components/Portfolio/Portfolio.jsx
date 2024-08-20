@@ -1,9 +1,12 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { CardList } from "./comp/Card";
 
 const About = () => {
+  const [activeTab, setActiveTab] = useState("publisher");
   const portfolioData = [
     {
+      category: "publisher",
       id: "cy-tech-blog",
       link: "https://bit.ly/cyleeBlog", // 실제 Notion 블로그 링크로 변경 필요
       image: "/images/cy-blog-banner.png", // 블로그 배너 이미지 경로
@@ -16,6 +19,7 @@ const About = () => {
       description: "최신 웹 기술 트렌드와 개발 경험을 공유하는\n 프론트엔드 개발자의 기술 블로그"
     },
     {
+      category: "publisher",
       id: "incheon-city",
       link: "https://www.incheon.go.kr/index", // 실제 인천광역시 웹사이트 링크
       image: "/images/pt-incheon-city.png", // 인천광역시 프로젝트 이미지 경로로 변경 필요
@@ -31,6 +35,7 @@ const About = () => {
       description: "3년간의 지속적인 개선과 유지보수\n 웹 접근성 및 사용자 경험 최적화"
     },
     {
+      category: "publisher",
       id: "korean-bank-evaluation",
       link: "https://box3101.github.io/BankofKorea/dist/guide/guide.html",
       image: "/images/pt-koreaBank.jpg",
@@ -41,6 +46,7 @@ const About = () => {
       description: "체계적이고 공정한 직원 평가를 위한\n데이터 기반 평가 관리 시스템"
     },
     {
+      category: "publisher",
       id: "incheon-jung-gu-edu",
       link: "https://github.com/box3101/AstroProject",
       image: "/images/incheon-jung-gu-edu.jpg",
@@ -59,6 +65,7 @@ const About = () => {
       }
     },
     {
+      category: "publisher",
       id: "g4b-business-support",
       link: "https://box3101.github.io/g4b/assets/guide/guide.html",
       image: "/images/g4b-business-support.svg",
@@ -77,6 +84,7 @@ const About = () => {
       }
     },
     {
+      category: "publisher",
       id: "ict-ksa-system",
       link: "https://rnd.tta.or.kr/user/main/main/main",
       image: "/images/ict-ksa-system.png",
@@ -93,6 +101,7 @@ const About = () => {
       }
     },
     {
+      category: "publisher",
       id: "samsung-sdi-gsop",
       link: "https://cylee-blog.notion.site/SDI-308c97bcb9894e71818e3dcd48dda889",
       image: "/images/samsung-sdi-gsop.png",
@@ -107,8 +116,74 @@ const About = () => {
         role: "Admin 화면단 개발",
         features: "기존 솔루션 커스터마이징"
       }
+    },
+    {
+      id: "react-portfolio",
+      category: "react",
+      link: "https://chanyong.netlify.app/",
+      image: "/images/react-portfolio.png",
+      info: `(2024.08 - 현재) \n React를 이용한 개인 포트폴리오 웹사이트 개발
+      • Vite를 사용한 빠른 개발 환경 구축
+      • React Router를 통한 SPA 구현
+      • AOS를 활용한 스크롤 애니메이션 효과
+      • Framer Motion을 이용한 부드러운 전환 효과`,
+      tags: ["# React", "# Vite", "# React Router", "# AOS", "# Framer Motion", "# Netlify"],
+      subtitle: "Personal Portfolio Website",
+      title: "React Portfolio",
+      description: "최신 React 기술을 활용한\n반응형 개인 포트폴리오 웹사이트"
+    },
+    {
+      category: "react",
+      id: "okr-solution-development",
+      link: "ready", // 준비중 페이지 링크
+      image: "/images/empty.png", // 성과관리 OKR 솔루션 이미지 경로
+      info: `(2024.06 - 현재) \n 성과관리 OKR 솔루션 개발 프로젝트
+        • React와 Ant Design을 활용한 사용자 중심의 UI/UX 개발
+        • Ant Design 기반의 커스텀 컴포넌트 개발로 일관성 있는 디자인 적용
+        • Storybook을 활용한 컴포넌트 개발 및 문서화
+        `,
+      tags: ["# React", "# Ant Design", "# Storybook", "# UI/UX", "# 컴포넌트 기반 아키텍처"],
+      subtitle: "OKR Solution Development",
+      title: "성과관리 OKR 솔루션 개발",
+      description:
+        "재사용 가능한 컴포넌트 라이브러리 구축으로 개발 생산성 향상\nStorybook을 통한 시각적 테스트로 QA 시간 단축"
+    },
+    {
+      category: "vue",
+      id: "company-portfolio-landing",
+      link: "https://포켓컴퍼니.com/portfolio", // Replace with actual landing page link
+      image: "/images/empty.png",
+      info: `(2024.02 - 2024.06) \n 자사 서비스 포트폴리오 및 랜딩 페이지 개발
+        • Vue.js를 활용한 동적 UI 개발
+        • 사용자 반응형 웹 페이지 구현
+        `,
+      tags: ["# Vue.js", "# 브랜딩", "# 랜딩 페이지", "# 컴포넌트 기반 아키텍처"],
+      subtitle: "Portfolio and Landing Page Development",
+      title: "자사 서비스 포트폴리오 및 \n  랜딩 페이지",
+      description: "효율적이고 반응형인 포트폴리오 및 랜딩 페이지 개발"
+    },
+    {
+      category: "vue",
+      id: "crm-pocket-camp-frontend",
+      link: "https://www.xn--9i1b674cwc38r6pa.com/camp/list", // Replace with actual CRM Pocket Camp link
+      image: "/images/empty.png",
+      info: `(2024.02 - 2024.06) \n 자사 CRM 포켓캠프 프론트엔드 개발
+        • 포켓강의 및 교육용 동영상 스트리밍 서비스 개발
+        • Vue.js를 활용한 싱글 페이지 애플리케이션(SPA) 구현
+        • 비디오 플랫폼 인터페이스 구축`,
+      tags: ["# Vue.js", "# 비디오 스트리밍", "# SPA", "# 사용자 경험"],
+      subtitle: "CRM Pocket Camp Frontend Development",
+      title: "자사 CRM 포켓캠프 프론트엔드",
+      description: "상시 접근 가능한 교육 콘텐츠 제공"
     }
   ];
+
+  const categorizedData = {
+    publisher: portfolioData.filter(project => project.category === "publisher"),
+    react: portfolioData.filter(project => project.category === "react"),
+    vue: portfolioData.filter(project => project.category === "vue")
+  };
+
   return (
     <div className='history-section'>
       <Link to='/' className='history-close hover-target' />
@@ -116,13 +191,26 @@ const About = () => {
         <div className='col-12 text-center' data-aos='fade-up'>
           <h3>Portfolio</h3>
         </div>
-        <div class='col-12 mt-3 mb-5 text-center'>
+        <div className='col-12 mt-3 mb-5 text-center'>
           <p>
-            <span>Following your request, i always do my Best!</span>
+            <span>Following your request, I always do my Best!</span>
           </p>
         </div>
+        <div className='brand-btn-group'>
+          <button
+            className={activeTab === "publisher" ? "is-active" : "brand-btn"}
+            onClick={() => setActiveTab("publisher")}>
+            Publishing
+          </button>
+          <button className={activeTab === "react" ? "is-active" : "brand-btn"} onClick={() => setActiveTab("react")}>
+            React
+          </button>
+          <button className={activeTab === "vue" ? "is-active" : "brand-btn"} onClick={() => setActiveTab("vue")}>
+            Vue
+          </button>
+        </div>
         <div className='portfolio-container'>
-          <CardList cards={portfolioData} />
+          <CardList cards={categorizedData[activeTab]} />
         </div>
       </div>
     </div>
