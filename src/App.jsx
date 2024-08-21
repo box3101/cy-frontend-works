@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Home from "./pages/Home";
 import About from "./components/About/About";
 import Skill from "./components/Skill/Skill";
 import Contact from "./components/Contact/Contact";
 import Portfolio from "./components/Portfolio/Portfolio";
+import BrowerWork from "./components/JavaScript/browerWork";
 import "aos/dist/aos.css";
 import AOS from "aos";
 
@@ -35,11 +36,7 @@ function PageContent({ children, isFirstLoad }) {
     }
   }, [isFirstLoad]);
 
-  return (
-    <div className={`page-content ${visible ? 'visible' : ''}`}>
-      {children}
-    </div>
-  );
+  return <div className={`page-content ${visible ? "visible" : ""}`}>{children}</div>;
 }
 
 function AppContent() {
@@ -53,27 +50,66 @@ function AppContent() {
   }, [location]);
 
   return (
-    <div className="app-container">
+    <div className='app-container'>
       <TransitionGroup>
-        <CSSTransition
-          key={location.pathname}
-          classNames="fade"
-          timeout={isFirstLoad ? 0 : 2000}
-        >
-          <div className="route-section">
+        <CSSTransition key={location.pathname} classNames='fade' timeout={isFirstLoad ? 0 : 2000}>
+          <div className='route-section'>
             {!isFirstLoad && (
               <>
-                <div className="wave wave1"></div>
-                <div className="wave wave2"></div>
-                <div className="wave wave3"></div>
+                <div className='wave wave1'></div>
+                <div className='wave wave2'></div>
+                <div className='wave wave3'></div>
               </>
             )}
             <Routes location={location}>
-              <Route path='/' element={<PageContent isFirstLoad={isFirstLoad}><Home /></PageContent>} />
-              <Route path='/about' element={<PageContent isFirstLoad={isFirstLoad}><About /></PageContent>} />
-              <Route path='/skill' element={<PageContent isFirstLoad={isFirstLoad}><Skill /></PageContent>} />
-              <Route path='/contact' element={<PageContent isFirstLoad={isFirstLoad}><Contact /></PageContent>} />
-              <Route path='/portfolio' element={<PageContent isFirstLoad={isFirstLoad}><Portfolio /></PageContent>} />
+              <Route
+                path='/'
+                element={
+                  <PageContent isFirstLoad={isFirstLoad}>
+                    <Home />
+                  </PageContent>
+                }
+              />
+              <Route
+                path='/about'
+                element={
+                  <PageContent isFirstLoad={isFirstLoad}>
+                    <About />
+                  </PageContent>
+                }
+              />
+              <Route
+                path='/skill'
+                element={
+                  <PageContent isFirstLoad={isFirstLoad}>
+                    <Skill />
+                  </PageContent>
+                }
+              />
+              <Route
+                path='/contact'
+                element={
+                  <PageContent isFirstLoad={isFirstLoad}>
+                    <Contact />
+                  </PageContent>
+                }
+              />
+              <Route
+                path='/portfolio'
+                element={
+                  <PageContent isFirstLoad={isFirstLoad}>
+                    <Portfolio />
+                  </PageContent>
+                }
+              />
+              <Route
+                path='/javascript/brower-work'
+                element={
+                  <PageContent isFirstLoad={isFirstLoad}>
+                    <BrowerWork />
+                  </PageContent>
+                }
+              />
             </Routes>
           </div>
         </CSSTransition>

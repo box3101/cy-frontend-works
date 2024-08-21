@@ -10,13 +10,13 @@ const About = () => {
       id: "cy-tech-blog",
       link: "https://bit.ly/cyleeBlog", // 실제 Notion 블로그 링크로 변경 필요
       image: "/images/cy-blog-banner.png", // 블로그 배너 이미지 경로
-      info: `(2022.01 ~ 현재) \n CY의 Tech Chronicles: 프론트엔드 개발 인사이트 공유
-    • 팀원 대상 JavaScript 및 최신 SPA 프레임워크(Astro, React, Vue) 교육 자료 제공
+      info: `(2022.01 ~ 현재) \n Cy의 Tech Chronicles: 프론트엔드 개발 인사이트 공유
+    • 팀원 대상 JavaScript 및 \n 최신 SPA 프레임워크(Astro, React, Vue) 교육 자료 제공
   `,
       tags: ["# 프론트엔드", "# 웹개발", "# JavaScript", "# React", "# Vue", "Git ", "# 기술 블로그"],
       subtitle: "Personal Tech Blog",
       title: "CY's Tech Chronicles",
-      description: "최신 웹 기술 트렌드와 개발 경험을 공유하는\n 프론트엔드 개발자의 기술 블로그"
+      description: "최신 웹 기술 트렌드와 개발 경험을 공유하는\n 기술 블로그"
     },
     {
       category: "publisher",
@@ -129,14 +129,14 @@ const About = () => {
       • Framer Motion을 이용한 부드러운 전환 효과`,
       tags: ["# React", "# Vite", "# React Router", "# AOS", "# Framer Motion", "# Netlify"],
       subtitle: "Personal Portfolio Website",
-      title: "React Portfolio",
+      title: "개인 React Portfolio",
       description: "최신 React 기술을 활용한\n반응형 개인 포트폴리오 웹사이트"
     },
     {
       category: "react",
       id: "okr-solution-development",
       link: "ready", // 준비중 페이지 링크
-      image: "/images/empty.png", // 성과관리 OKR 솔루션 이미지 경로
+      image: "/images/okr-solution-development.png", // 성과관리 OKR 솔루션 이미지 경로
       info: `(2024.06 - 현재) \n 성과관리 OKR 솔루션 개발 프로젝트
         • React와 Ant Design을 활용한 사용자 중심의 UI/UX 개발
         • Ant Design 기반의 커스텀 컴포넌트 개발로 일관성 있는 디자인 적용
@@ -149,10 +149,27 @@ const About = () => {
         "재사용 가능한 컴포넌트 라이브러리 구축으로 개발 생산성 향상\nStorybook을 통한 시각적 테스트로 QA 시간 단축"
     },
     {
+      category: "react",
+      id: "animal-flash-cards",
+      link: "https://github.com/box3101/AnimalCards/",
+      image: "/images/react-portfolio.png", // 프로젝트 대표 이미지 경로
+      info: `(2023.06.03 - 2023.06.16) \n 아이를 위한 동물 플래시 카드 웹 애플리케이션 개발
+        • React를 활용한 컴포넌트 기반 설계 및 상태 관리 구현
+        • 동물 이미지, 이름, 소리를 포함한 인터랙티브 플래시카드 구현
+        • 이미지 로딩 최적화로 사용자 경험 향상
+        • 다국어(한국어, 영어) 지원 기능 추가
+        • 동물 종류에 따른 카테고리화 구현
+        `,
+      tags: ["# React", "# 컴포넌트 기반 설계", "# 상태 관리", "# 사용자 경험", "# 다국어 지원", "# 교육용 앱"],
+      subtitle: "toy project",
+      title: "동물 플래시 카드",
+      description: "React 학습 경험을 실제 프로젝트에 적용한 교육용 웹 애플리케이션\n아이들의 동물 학습을 위한 인터랙티브 플래시카드 시스템"
+    },    
+    {
       category: "vue",
       id: "company-portfolio-landing",
       link: "https://포켓컴퍼니.com/portfolio", // Replace with actual landing page link
-      image: "/images/empty.png",
+      image: "/images/company-portfolio-landing.svg",
       info: `(2024.02 - 2024.06) \n 자사 서비스 포트폴리오 및 랜딩 페이지 개발
         • Vue.js를 활용한 동적 UI 개발
         • 사용자 반응형 웹 페이지 구현
@@ -166,7 +183,7 @@ const About = () => {
       category: "vue",
       id: "crm-pocket-camp-frontend",
       link: "https://www.xn--9i1b674cwc38r6pa.com/camp/list", // Replace with actual CRM Pocket Camp link
-      image: "/images/empty.png",
+      image: "/images/company-portfolio-landing.svg",
       info: `(2024.02 - 2024.06) \n 자사 CRM 포켓캠프 프론트엔드 개발
         • 포켓강의 및 교육용 동영상 스트리밍 서비스 개발
         • Vue.js를 활용한 싱글 페이지 애플리케이션(SPA) 구현
@@ -175,13 +192,27 @@ const About = () => {
       subtitle: "CRM Pocket Camp Frontend Development",
       title: "자사 CRM 포켓캠프 프론트엔드",
       description: "상시 접근 가능한 교육 콘텐츠 제공"
+    },
+    {
+      category: "javascript",
+      id: "event-loop-visualization",
+      link: "../javascript/brower-work", // 실제 호스팅된 프로젝트 URL로 변경 필요
+      image: "/images/react-portfolio.png", // 프로젝트 대표 이미지 경로
+      info: `(제작 일자) \n JavaScript 이벤트 루프 시각화 웹 애플리케이션
+        • 콜 스택, 콜백 큐, 출력을 시각적으로 표현
+      `,
+      tags: ["# JavaScript", "# 이벤트 루프", "# 비동기 프로그래밍", "# Web API", "# 교육용 도구"],
+      subtitle: "Interactive Event Loop Demonstration",
+      title: "JavaScript 이벤트 루프 시각화",
+      description: "JavaScript의 이벤트 루프 메커니즘을 이해할 수 있게 시각화"
     }
   ];
 
   const categorizedData = {
     all: portfolioData,
     react: portfolioData.filter(project => project.category === "react"),
-    vue: portfolioData.filter(project => project.category === "vue")
+    vue: portfolioData.filter(project => project.category === "vue"),
+    javascript : portfolioData.filter(project => project.category === "javascript"),
   };
 
   return (
@@ -205,6 +236,9 @@ const About = () => {
           </button>
           <button className={activeTab === "vue" ? "is-active" : "brand-btn"} onClick={() => setActiveTab("vue")}>
             Vue
+          </button>
+          <button className={activeTab === "javascript" ? "is-active" : "brand-btn"} onClick={() => setActiveTab("javascript")}>
+            JavaScript + (Es6+)
           </button>
         </div>
         <div className='portfolio-container'>
