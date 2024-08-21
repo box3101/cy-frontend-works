@@ -1,127 +1,150 @@
-import React, { useState, useEffect } from 'react';
-import './index.css';
+import React, { useEffect, useRef } from "react";
+import "./index.css";
 
 function BrowserWork() {
-  const [callStack, setCallStack] = useState([]);
-  const [callbackQueue, setCallbackQueue] = useState([]);
-  const [output, setOutput] = useState([]);
-  const [isSimulating, setIsSimulating] = useState(false);
-
-  const addToStack = (item) => {
-    setCallStack(prevStack => [item, ...prevStack]);
-  };
-
-  const removeFromStack = () => {
-    setCallStack(prevStack => prevStack.slice(1));
-  };
-
-  const addToQueue = (item) => {
-    setCallbackQueue(prevQueue => [...prevQueue, item]);
-  };
-
-  const removeFromQueue = () => {
-    setCallbackQueue(prevQueue => prevQueue.slice(1));
-  };
-
-  const addOutput = (message) => {
-    setOutput(prevOutput => [...prevOutput, message]);
-  };
+  const isSimulatingRef = useRef(false);
 
   useEffect(() => {
-    let timeoutId;
-    if (isSimulating && callStack.length === 0 && callbackQueue.length > 0) {
-      timeoutId = setTimeout(processEventLoop, 1000);
+    const callStackEl = document.getElementById("callStack");
+    const callbackQueueEl = document.getElementById("callbackQueue");
+    const outputEl = document.getElementById("output");
+    const startButton = document.getElementById("startButton");
+
+    let callStack = [];
+    let callbackQueue = [];
+
+    function addToStack(item) {
+      callStack.unshift(item);
+      renderCallStack();
     }
-    return () => clearTimeout(timeoutId);
-  }, [isSimulating, callStack, callbackQueue]);
 
-  const simulateEventLoop = () => {
-    setIsSimulating(true);
-    addToStack('main()');
-    addOutput('main() 실행');
+    function removeFromStack() {
+      callStack.shift();
+      renderCallStack();
+    }
 
-    setTimeout(() => {
-      addToStack('setTimeout()');
-      addOutput('setTimeout() 호출됨');
-      
+    function addToQueue(item) {
+      callbackQueue.push(item);
+      renderCallbackQueue();
+    }
+
+    function removeFromQueue() {
+      const item = callbackQueue.shift();
+      renderCallbackQueue();
+      return item;
+    }
+
+    function addOutput(message) {
+      const p = document.createElement("p");
+      p.textContent = message;
+      outputEl.appendChild(p);
+      outputEl.scrollTop = outputEl.scrollHeight;
+    }
+
+    function renderCallStack() {
+      callStackEl.innerHTML = callStack.map(item => `<div class="item">${item}</div>`).join("");
+    }
+
+    function renderCallbackQueue() {
+      callbackQueueEl.innerHTML = callbackQueue.map(item => `<div class="item">${item}</div>`).join("");
+    }
+
+    function simulateEventLoop() {
+      if (isSimulatingRef.current) return;
+      isSimulatingRef.current = true;
+      startButton.disabled = true;
+      startButton.textContent = "실행 중...";
+
+      // Clear previous state
+      callStack = [];
+      callbackQueue = [];
+      outputEl.innerHTML = "";
+      renderCallStack();
+      renderCallbackQueue();
+
+      // Simulate main execution
+      addToStack("main()");
+      addOutput("main() 실행");
+
+      // Simulate setTimeout calls
       setTimeout(() => {
-        removeFromStack(); // setTimeout() 제거
-        addToStack('console.log()');
-        addOutput('콘솔 로그 출력');
-        
+        addOutput("setTimeout1() 호출됨");
+        addToQueue("setTimeout1 콜백");
+        addOutput("setTimeout1 콜백 큐에 추가됨");
+
         setTimeout(() => {
-          removeFromStack(); // console.log() 제거
-          removeFromStack(); // main() 제거
-          addOutput('main() 완료');
-          
+          addOutput("setTimeout2() 호출됨");
+          addToQueue("setTimeout2 콜백");
+          addOutput("setTimeout2 콜백 큐에 추가됨");
+
           setTimeout(() => {
-            addToQueue('setTimeout 콜백');
-            addOutput('setTimeout 콜백 큐에 추가됨');
-          }, 1000);
-        }, 1000);
-      }, 1000);
-    }, 1000);
-  };
+            addOutput("setTimeout3() 호출됨");
+            addToQueue("setTimeout3 콜백");
+            addOutput("setTimeout3 콜백 큐에 추가됨");
 
-  const processEventLoop = () => {
-    if (callStack.length === 0 && callbackQueue.length > 0) {
-      const callback = callbackQueue[0];
-      removeFromQueue();
-      addToStack(callback);
-      addOutput(`${callback} 콜 스택으로 이동`);
+            // Main execution finished
+            removeFromStack(); // Remove main()
+            addOutput("main() 완료");
 
-      setTimeout(() => {
-        addOutput(`${callback} 실행`);
-        
+            // Start processing the event loop
+            processEventLoop();
+          }, 2000);
+        }, 2000);
+      }, 2000);
+    }
+
+    function processEventLoop() {
+      if (callbackQueue.length > 0) {
+        const callback = removeFromQueue();
+        addToStack(callback);
+        addOutput(`${callback} 콜 스택으로 이동`);
+
+        // Simulate callback execution
         setTimeout(() => {
+          addOutput(`${callback} 실행`);
           removeFromStack();
           addOutput(`${callback} 완료`);
-          setIsSimulating(false);
-        }, 1000);
-      }, 1000);
-    } else {
-      setIsSimulating(false);
-    }
-  };
 
-  const handleStart = () => {
-    if (!isSimulating) {
-      setCallStack([]);
-      setCallbackQueue([]);
-      setOutput([]);
-      simulateEventLoop();
+          // Continue processing the event loop
+          processEventLoop();
+        }, 1000);
+      } else {
+        // All callbacks processed
+        isSimulatingRef.current = false;
+        startButton.disabled = false;
+        startButton.textContent = "시작";
+      }
     }
-  };
+
+    function handleStart() {
+      if (!isSimulatingRef.current) {
+        simulateEventLoop();
+      }
+    }
+
+    startButton.addEventListener("click", handleStart);
+
+    // Cleanup function
+    return () => {
+      startButton.removeEventListener("click", handleStart);
+    };
+  }, []); // Empty dependency array means this effect runs once on mount
 
   return (
-    <div className="browser">
-      <div className="container">
-        <div className="column">
+    <div className='browser'>
+      <div className='container'>
+        <div className='column'>
           <h2>콜스택</h2>
-          <div className="stack">
-            {callStack.map((item, index) => (
-              <div key={index} className="item">{item}</div>
-            ))}
-          </div>
-          <button onClick={handleStart} disabled={isSimulating}>
-            {isSimulating ? '실행 중...' : '시작'}
-          </button>
+          <div id='callStack' className='stack'></div>
+          <button id='startButton'>시작</button>
         </div>
-        <div className="column">
+        <div className='column'>
           <h2>콜백 큐</h2>
-          <div className="queue">
-            {callbackQueue.map((item, index) => (
-              <div key={index} className="item">{item}</div>
-            ))}
-          </div>
+          <div id='callbackQueue' className='queue'></div>
         </div>
-        <div className="column">
+        <div className='column'>
           <h2>출력</h2>
-          <div className="output">
-            {output.map((message, index) => (
-              <p key={index}>{message}</p>
-            ))}
-          </div>
+          <div id='output' className='output'></div>
         </div>
       </div>
     </div>
