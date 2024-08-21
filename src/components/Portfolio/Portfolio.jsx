@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { CardList } from "./comp/Card";
 
 const About = () => {
-  const [activeTab, setActiveTab] = useState("publisher");
+  const [activeTab, setActiveTab] = useState("all");
   const portfolioData = [
     {
       category: "publisher",
@@ -179,7 +179,7 @@ const About = () => {
   ];
 
   const categorizedData = {
-    publisher: portfolioData.filter(project => project.category === "publisher"),
+    all: portfolioData,
     react: portfolioData.filter(project => project.category === "react"),
     vue: portfolioData.filter(project => project.category === "vue")
   };
@@ -197,10 +197,8 @@ const About = () => {
           </p>
         </div>
         <div className='brand-btn-group'>
-          <button
-            className={activeTab === "publisher" ? "is-active" : "brand-btn"}
-            onClick={() => setActiveTab("publisher")}>
-            Publishing
+          <button className={activeTab === "all" ? "is-active" : "brand-btn"} onClick={() => setActiveTab("all")}>
+            All
           </button>
           <button className={activeTab === "react" ? "is-active" : "brand-btn"} onClick={() => setActiveTab("react")}>
             React
