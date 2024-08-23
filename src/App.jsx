@@ -6,8 +6,8 @@ import About from "./components/About/About";
 import Skill from "./components/Skill/Skill";
 import Contact from "./components/Contact/Contact";
 import Portfolio from "./components/Portfolio/Portfolio";
-import BrowserWork from "./components/JavaScript/browerWork";
-import Promise from "./components/JavaScript/promise";
+import BrowserWork from "./components/JavaScript/BrowerWork";
+import Promise from "./components/JavaScript/Promise";
 import "aos/dist/aos.css";
 import AOS from "aos";
 
@@ -112,7 +112,7 @@ function AppContent() {
                 }
               />
               <Route
-                path='/javascript/promise'
+                path='/javascript/promise-visualization'
                 element={
                   <PageContent isFirstLoad={isFirstLoad}>
                     <Promise />
