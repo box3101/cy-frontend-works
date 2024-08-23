@@ -218,6 +218,19 @@ const About = () => {
       subtitle: "Interactive Promise Mechanism Demonstration",
       title: "JavaScript Promise 시각화",
       description: "JavaScript의 Promise 작동 방식을 이해할 수 있게 시각화"
+    },
+    {
+      category: "javascript",
+      id: "async-await-visualization",
+      link: "../javascript/await-async",
+      image: "/images/react-portfolio.png",
+      info: `JavaScript Async/Await 시각화 웹 애플리케이션
+        • Async/Await의 실행 흐름과 처리 과정을 시각적으로 표현
+        • 비동기 작업의 순차적 실행을 막대 차트로 표시`,
+      tags: ["# JavaScript", "# Async/Await", "# 비동기 프로그래밍", "# 시각화", "# 교육용 도구"],
+      subtitle: "Interactive Async/Await Mechanism Demonstration",
+      title: "JavaScript Async/Await 시각화",
+      description: "JavaScript의 Async/Await 작동 방식을 이해할 수 있게 시각화한 도구"
     }
   ];
 

@@ -8,6 +8,7 @@ import Contact from "./components/Contact/Contact";
 import Portfolio from "./components/Portfolio/Portfolio";
 import BrowserWork from "./components/JavaScript/BrowerWork";
 import Promise from "./components/JavaScript/Promise";
+import Await from "./components/JavaScript/Await";
 import "aos/dist/aos.css";
 import AOS from "aos";
 
@@ -116,6 +117,14 @@ function AppContent() {
                 element={
                   <PageContent isFirstLoad={isFirstLoad}>
                     <Promise />
+                  </PageContent>
+                }
+              />
+               <Route
+                path='/javascript/await-async'
+                element={
+                  <PageContent isFirstLoad={isFirstLoad}>
+                    <Await />
                   </PageContent>
                 }
               />
