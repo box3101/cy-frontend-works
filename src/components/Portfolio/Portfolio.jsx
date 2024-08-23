@@ -152,7 +152,7 @@ const About = () => {
       category: "react",
       id: "animal-flash-cards",
       link: "https://github.com/box3101/AnimalCards/",
-      image: "/images/react-portfolio.png", // 프로젝트 대표 이미지 경로
+      image: "/images/react-portfolio.png",
       info: `(2023.06.03 - 2023.06.16) \n 아이를 위한 동물 플래시 카드 웹 애플리케이션 개발
         • React를 활용한 컴포넌트 기반 설계 및 상태 관리 구현
         • 동물 이미지, 이름, 소리를 포함한 인터랙티브 플래시카드 구현
@@ -196,15 +196,28 @@ const About = () => {
     {
       category: "javascript",
       id: "event-loop-visualization",
-      link: "../javascript/brower-work", // 실제 호스팅된 프로젝트 URL로 변경 필요
-      image: "/images/react-portfolio.png", // 프로젝트 대표 이미지 경로
-      info: `(제작 일자) \n JavaScript 이벤트 루프 시각화 웹 애플리케이션
+      link: "../javascript/browser-work", 
+      image: "/images/react-portfolio.png",
+      info: `JavaScript 이벤트 루프 시각화 웹 애플리케이션
         • 콜 스택, 콜백 큐, 출력을 시각적으로 표현
       `,
       tags: ["# JavaScript", "# 이벤트 루프", "# 비동기 프로그래밍", "# Web API", "# 교육용 도구"],
       subtitle: "Interactive Event Loop Demonstration",
       title: "JavaScript 이벤트 루프 시각화",
       description: "JavaScript의 이벤트 루프 메커니즘을 이해할 수 있게 시각화"
+    },
+    {
+      category: "javascript",
+      id: "promise-visualization",
+      link: "../javascript/promise-visualization", 
+      image: "/images/react-portfolio.png",
+      info: `JavaScript Promise 시각화 웹 애플리케이션
+        • Promise의 상태 변화와 처리 과정을 시각적으로 표현
+      `,
+      tags: ["# JavaScript", "# Promise", "# 비동기 프로그래밍", "# 시각화", "# 교육용 도구"],
+      subtitle: "Interactive Promise Mechanism Demonstration",
+      title: "JavaScript Promise 시각화",
+      description: "JavaScript의 Promise 작동 방식을 이해할 수 있게 시각화"
     }
   ];
 

@@ -6,7 +6,8 @@ import About from "./components/About/About";
 import Skill from "./components/Skill/Skill";
 import Contact from "./components/Contact/Contact";
 import Portfolio from "./components/Portfolio/Portfolio";
-import BrowerWork from "./components/JavaScript/browerWork";
+import BrowserWork from "./components/JavaScript/browerWork";
+import Promise from "./components/JavaScript/promise";
 import "aos/dist/aos.css";
 import AOS from "aos";
 
@@ -103,10 +104,18 @@ function AppContent() {
                 }
               />
               <Route
-                path='/javascript/brower-work'
+                path='/javascript/browser-work'
                 element={
                   <PageContent isFirstLoad={isFirstLoad}>
-                    <BrowerWork />
+                    <BrowserWork />
+                  </PageContent>
+                }
+              />
+              <Route
+                path='/javascript/promise'
+                element={
+                  <PageContent isFirstLoad={isFirstLoad}>
+                    <Promise />
                   </PageContent>
                 }
               />

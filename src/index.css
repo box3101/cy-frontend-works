@@ -1177,6 +1177,12 @@ img {
 .card-wrap > li.brand-card-event-loop-visualization .image-hover .tag-wrap .tag {
   background: #0020a7;
 }
+.card-wrap > li.brand-card-promise-visualization .image-hover {
+  background-color: rgba(0, 44, 237, 0.9);
+}
+.card-wrap > li.brand-card-promise-visualization .image-hover .tag-wrap .tag {
+  background: #0020a7;
+}
 .card-wrap > li.brand-card-okr-solution-development .image-hover {
   background-color: rgba(60, 163, 60, 0.9);
 }
