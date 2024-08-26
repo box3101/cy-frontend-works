@@ -6,7 +6,7 @@ import About from "./components/About/About";
 import Skill from "./components/Skill/Skill";
 import Contact from "./components/Contact/Contact";
 import Portfolio from "./components/Portfolio/Portfolio";
-import BrowserWork from "./components/JavaScript/BrowerWork";
+// import BrowserWork from "./components/JavaScript/BrowerWork";
 import Promise from "./components/JavaScript/Promise";
 import Await from "./components/JavaScript/Await";
 import "aos/dist/aos.css";
@@ -104,7 +104,7 @@ function AppContent() {
                   </PageContent>
                 }
               />
-              <Route
+              {/* <Route
                 path='/javascript/browser-work'
                 element={
                   <PageContent isFirstLoad={isFirstLoad}>
@@ -127,7 +127,7 @@ function AppContent() {
                     <Await />
                   </PageContent>
                 }
-              />
+              /> */}
             </Routes>
           </div>
         </CSSTransition>
