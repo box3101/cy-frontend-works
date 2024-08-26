@@ -238,7 +238,7 @@ const About = () => {
     all: portfolioData,
     react: portfolioData.filter(project => project.category === "react"),
     vue: portfolioData.filter(project => project.category === "vue"),
-    javascript : portfolioData.filter(project => project.category === "javascript"),
+    // javascript : portfolioData.filter(project => project.category === "javascript"),
   };
 
   return (
@@ -257,15 +257,15 @@ const About = () => {
           <button className={activeTab === "all" ? "is-active" : "brand-btn"} onClick={() => setActiveTab("all")}>
             All
           </button>
-          <button className={activeTab === "react" ? "is-active" : "brand-btn"} onClick={() => setActiveTab("react")}>
+          {/* <button className={activeTab === "react" ? "is-active" : "brand-btn"} onClick={() => setActiveTab("react")}>
             React
           </button>
           <button className={activeTab === "vue" ? "is-active" : "brand-btn"} onClick={() => setActiveTab("vue")}>
             Vue
-          </button>
-          <button className={activeTab === "javascript" ? "is-active" : "brand-btn"} onClick={() => setActiveTab("javascript")}>
+          </button> */}
+          {/* <button className={activeTab === "javascript" ? "is-active" : "brand-btn"} onClick={() => setActiveTab("javascript")}>
             JavaScript + (Es6+)
-          </button>
+          </button> */}
         </div>
         <div className='portfolio-container'>
           <CardList cards={categorizedData[activeTab]} />
