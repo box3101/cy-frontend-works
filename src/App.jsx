@@ -7,8 +7,8 @@ import Skill from "./components/Skill/Skill";
 import Contact from "./components/Contact/Contact";
 import Portfolio from "./components/Portfolio/Portfolio";
 // import BrowserWork from "./components/JavaScript/BrowerWork";
-import Promise from "./components/JavaScript/Promise";
-import Await from "./components/JavaScript/Await";
+// import Promise from "./components/JavaScript/Promise";
+// import Await from "./components/JavaScript/Await";
 import "aos/dist/aos.css";
 import AOS from "aos";
 
