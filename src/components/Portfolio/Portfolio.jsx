@@ -37,7 +37,7 @@ const About = () => {
     {
       category: "publisher",
       id: "korean-bank-evaluation",
-      link: "https://box3101.github.io/BankofKorea/dist/guide/guide.html",
+      link: "https://venerable-treacle-f7ca8a.netlify.app/guide/guide.html",
       image: "/images/pt-koreaBank.jpg",
       info: "  (2023.07 - 2024.01) \n 한국은행의 직원평가시스템을 [ 기획 - 디자인 - 개발 ] 올인원으로 빌드업한 사례입니다. \n Astro 프레임워크를 사용하여 개발 효율성을 높임",
       tags: ["Astro 프레임워크 사용", "# 적응형", "# 웹 접근성", "# 인터렉션", "# IT SAAS"],
