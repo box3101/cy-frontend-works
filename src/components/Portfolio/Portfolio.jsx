@@ -21,17 +21,19 @@ const About = () => {
     },
     {
       category: "Astro",
-      id: "sgate-okr-solution",
-      link: "https://github.com/box3101/ispark-sgate",
-      image: "/images/pt-sgate.svg",
-      info: `(2025.03 ~ 현재) \n 이즈파크 Sgate 성과관리 솔루션 개발
-    • 현재 회사 GitLab으로 이관하여 개발 진행 중
-    • 디자인 컴포넌트 시스템 구축 및 UI/UX 최적화
+      id: "yeonsu-library-website",
+      link: "https://github.com/box3101/yeonsu-library-web",
+      image: "/images/pf-yeonsu-library.png",
+      info: `(2025.03 ~ 현재) \n 연수구립도서관 공식 웹사이트 개발
+    • Astro 4.15.0 기반 정적 사이트 생성
+    • SCSS 7-1 아키텍처 + BEM 방법론 적용
+    • 재사용 가능한 UI 컴포넌트 시스템 구축
+    • 도서관 서비스 및 커뮤니티 기능 퍼블리싱
   `,
-      tags: ["# JavaScript(ES6+)", "# Vue3", "# Pinia", "# Nuxt3", "# 디자인 시스템 개발", "# 성과관리 솔루션"],
-      subtitle: "성과관리 솔루션 개발",
-      title: "이즈파크 AX Group 성과관리 솔루션",
-      description: "이즈파크 AX Group의 성과관리 솔루션 개발"
+      tags: ["# Astro 4.15.0", "# SCSS", "# Vanilla JS", "# Nanostores", "# Swiper.js", "# 정적 사이트"],
+      subtitle: "도서관 공식 웹사이트",
+      title: "연수구립도서관 웹사이트 개발",
+      description: "Astro 기반 정적 사이트 생성으로 구축한 도서관 공식 웹사이트"
     },
     {
       category: "publisher",
