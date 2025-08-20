@@ -6,6 +6,34 @@ const About = () => {
   const [activeTab, setActiveTab] = useState("all");
   const portfolioData = [
     {
+      category: "vue3 + Nuxt3 + Pinia",
+      id: "sgate-okr-solution",
+      link: "https://github.com/box3101/ispark-sgate",
+      image: "/images/pt-sgate.svg",
+      info: `(2025.03 ~ 현재) \n 이즈파크 Sgate 성과관리 솔루션 개발
+    • 현재 회사 GitLab으로 이관하여 개발 진행 중
+    • 디자인 컴포넌트 시스템 구축 및 UI/UX 최적화
+  `,
+      tags: ["# JavaScript(ES6+)", "# Vue3", "# Pinia", "# Nuxt3", "# 디자인 시스템 개발", "# 성과관리 솔루션"],
+      subtitle: "성과관리 솔루션 개발",
+      title: "이즈파크 AX Group 성과관리 솔루션",
+      description: "이즈파크 AX Group의 성과관리 솔루션 개발"
+    },
+    {
+      category: "Astro",
+      id: "sgate-okr-solution",
+      link: "https://github.com/box3101/ispark-sgate",
+      image: "/images/pt-sgate.svg",
+      info: `(2025.03 ~ 현재) \n 이즈파크 Sgate 성과관리 솔루션 개발
+    • 현재 회사 GitLab으로 이관하여 개발 진행 중
+    • 디자인 컴포넌트 시스템 구축 및 UI/UX 최적화
+  `,
+      tags: ["# JavaScript(ES6+)", "# Vue3", "# Pinia", "# Nuxt3", "# 디자인 시스템 개발", "# 성과관리 솔루션"],
+      subtitle: "성과관리 솔루션 개발",
+      title: "이즈파크 AX Group 성과관리 솔루션",
+      description: "이즈파크 AX Group의 성과관리 솔루션 개발"
+    },
+    {
       category: "publisher",
       id: "cy-tech-blog",
       link: "https://bit.ly/cyleeBlog", // 실제 Notion 블로그 링크로 변경 필요
@@ -23,7 +51,7 @@ const About = () => {
       id: "incheon-city",
       link: "https://www.incheon.go.kr/index", // 실제 인천광역시 웹사이트 링크
       image: "/images/pt-incheon-city.png", // 인천광역시 프로젝트 이미지 경로로 변경 필요
-      info: `  (2020.01 ~ 2022.12) \n 인천광역시 웹사이트 및 패밀리 사이트 제작 및  유지보수 
+      info: `  (2020.01 ~ 2022.12) \n 인천광역시 웹사이트 및 패밀리 사이트 제작 및  유지보수
     • 2021.03 웹 접근성 마크 획득
     • 2021.10 행정안전부 품질관리 수준평가 우수평가
       (웹 접근성, 웹 호환성, 웹 편의성, 웹 접속성 부문)
@@ -50,8 +78,8 @@ const About = () => {
       id: "incheon-jung-gu-edu",
       link: "https://github.com/box3101/AstroProject",
       image: "/images/incheon-jung-gu-edu.jpg",
-      info: ` (2022.10 - 2023.03) \n 인천광역시 중구청 평생교육포털의 \n Front 및 관리자화면 UI 개발을 담당했습니다. 
-• gulp 대신 Astro 프레임워크를 사용하여 개발 효율성을 높였으며, 
+      info: ` (2022.10 - 2023.03) \n 인천광역시 중구청 평생교육포털의 \n Front 및 관리자화면 UI 개발을 담당했습니다.
+• gulp 대신 Astro 프레임워크를 사용하여 개발 효율성을 높였으며,
 • 2021.03 웹 접근성 마크 획득`,
       tags: ["# Astro 프레임워크", "# 반응형", "# 웹 접근성", "# 인터랙티브", "# Front-end 개발"],
       subtitle: "Lifelong Education Portal",
@@ -69,8 +97,8 @@ const About = () => {
       id: "g4b-business-support",
       link: "https://box3101.github.io/g4b/assets/guide/guide.html",
       image: "/images/g4b-business-support.svg",
-      info: `(2022.04 ~ 2022.07) \n G4b 기업지원 플러스 리뉴얼 작업을 수행했습니다. 
-    Front 화면단 작업을 담당, 
+      info: `(2022.04 ~ 2022.07) \n G4b 기업지원 플러스 리뉴얼 작업을 수행했습니다.
+    Front 화면단 작업을 담당,
     • 2021.03 웹 접근성 마크 획득`,
       tags: ["# 반응형", "# 인터랙티브", "# 웹 접근성", "# Astro 프레임워크", "# 리뉴얼"],
       subtitle: "Business Support Platform",
@@ -88,8 +116,8 @@ const About = () => {
       id: "ict-ksa-system",
       link: "https://rnd.tta.or.kr/user/main/main/main",
       image: "/images/ict-ksa-system.png",
-      info: `(2022.07 - 2022.11) \n ICT 한국표준협회 성과관리 시스템의 Front 화면단 작업을 담당. 
-    반응형 웹 디자인과 인터랙티브한 사용자 경험을 구현하여 
+      info: `(2022.07 - 2022.11) \n ICT 한국표준협회 성과관리 시스템의 Front 화면단 작업을 담당.
+    반응형 웹 디자인과 인터랙티브한 사용자 경험을 구현하여
     효율적인 성과관리 시스템을 개발.`,
       tags: ["# 반응형", "# 인터랙티브", "# 성과관리 시스템", "# Front-end 개발"],
       subtitle: "Performance Management System",
@@ -105,7 +133,7 @@ const About = () => {
       id: "samsung-sdi-gsop",
       link: "https://cylee-blog.notion.site/SDI-308c97bcb9894e71818e3dcd48dda889",
       image: "/images/samsung-sdi-gsop.png",
-      info: `(2023.02 - 2023.08) \n 삼성 SDI의 GSOP(Global Standard Operation Procedure) \n 시스템 개발 프로젝트에서 
+      info: `(2023.02 - 2023.08) \n 삼성 SDI의 GSOP(Global Standard Operation Procedure) \n 시스템 개발 프로젝트에서
     Admin 화면단 작업을 담당했습니다. `,
       tags: ["# 적응형", "# Admin 개발", "# 시스템 커스터마이징", "# 기업 솔루션", "# 각 색 테마적용"],
       subtitle: "Enterprise System Development",
@@ -164,7 +192,7 @@ const About = () => {
       subtitle: "toy project",
       title: "동물 플래시 카드",
       description: "React 학습 경험을 실제 프로젝트에 적용한 교육용 웹 애플리케이션\n아이들의 동물 학습을 위한 인터랙티브 플래시카드 시스템"
-    },    
+    },
     {
       category: "vue",
       id: "company-portfolio-landing",
@@ -196,7 +224,7 @@ const About = () => {
     {
       category: "javascript",
       id: "event-loop-visualization",
-      link: "../javascript/browser-work", 
+      link: "../javascript/browser-work",
       image: "/images/react-portfolio.png",
       info: `JavaScript 이벤트 루프 시각화 웹 애플리케이션
         • 콜 스택, 콜백 큐, 출력을 시각적으로 표현
@@ -209,7 +237,7 @@ const About = () => {
     {
       category: "javascript",
       id: "promise-visualization",
-      link: "../javascript/promise-visualization", 
+      link: "../javascript/promise-visualization",
       image: "/images/react-portfolio.png",
       info: `JavaScript Promise 시각화 웹 애플리케이션
         • Promise의 상태 변화와 처리 과정을 시각적으로 표현

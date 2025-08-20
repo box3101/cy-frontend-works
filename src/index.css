@@ -1105,6 +1105,12 @@ img {
     padding-bottom: 0;
   }
 }
+.card-wrap > li.brand-card-sgate-okr-solution .image-hover {
+  background-color: rgba(216, 0, 191, 0.91);
+}
+.card-wrap > li.brand-card-sgate-okr-solution .image-hover .tag-wrap .tag {
+  background-color: rgba(216, 0, 191, 0.91);
+}
 .card-wrap > li.brand-card-korean-bank-evaluation .image-hover {
   background-color: rgba(0, 13, 93, 0.9);
 }
